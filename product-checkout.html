@@ -450,19 +450,19 @@
                                     </table>
                                     <div class="shop-payment-method">
                                         <div id="PaymentMethodAccordion">
-                                            <div class="card">
+                                            <div class="card" style="display:none;">
                                                 <div class="card-header" id="check_payments">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne" aria-expanded="true">Direct bank transfer</h5>
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne">Direct bank transfer</h5>
                                                 </div>
-                                                <div id="itemOne" class="collapse show" aria-labelledby="check_payments" data-bs-parent="#PaymentMethodAccordion">
+                                                <div id="itemOne" class="collapse" aria-labelledby="check_payments" data-bs-parent="#PaymentMethodAccordion">
                                                     <div class="card-body">
                                                         <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
+                                            <div class="card" style="display:none;">
                                                 <div class="card-header" id="check_payments2">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemTwo" aria-controls="itemTwo" aria-expanded="false">Check payments</h5>
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemTwo" aria-controls="itemTwo">Check payments</h5>
                                                 </div>
                                                 <div id="itemTwo" class="collapse" aria-labelledby="check_payments2" data-bs-parent="#PaymentMethodAccordion">
                                                     <div class="card-body">
@@ -471,22 +471,32 @@
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <div class="card-header" id="check_payments3">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemThree" aria-controls="itemTwo" aria-expanded="false">Cash on delivery</h5>
+                                                <div class="card-header" id="check_payments_paystack">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemPaystack" aria-controls="itemPaystack">Pay with Paystack</h5>
                                                 </div>
-                                                <div id="itemThree" class="collapse" aria-labelledby="check_payments3" data-bs-parent="#PaymentMethodAccordion">
+                                                <div id="itemPaystack" class="collapse show" aria-labelledby="check_payments_paystack" data-bs-parent="#PaymentMethodAccordion">
                                                     <div class="card-body">
-                                                        <p>Pay with cash upon delivery.</p>
+                                                        <p>Pay securely with Paystack. Accepts cards, bank transfers, and more.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="card">
+                                                <div class="card-header" id="check_payments_pod">
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemPayOnDelivery" aria-controls="itemPayOnDelivery">Pay on Delivery</h5>
+                                                </div>
+                                                <div id="itemPayOnDelivery" class="collapse" aria-labelledby="check_payments_pod" data-bs-parent="#PaymentMethodAccordion">
+                                                    <div class="card-body">
+                                                        <p>Pay with cash when your order is delivered.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card" style="display:none;">
                                                 <div class="card-header" id="check_payments4">
-                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemTwo" aria-expanded="false">PayPal Express Checkout</h5>
+                                                    <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemFour">PayPal Express Checkout</h5>
                                                 </div>
                                                 <div id="itemFour" class="collapse" aria-labelledby="check_payments4" data-bs-parent="#PaymentMethodAccordion">
                                                     <div class="card-body">
-                                                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                                                        <p>Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -824,6 +834,25 @@
 
     <!-- Custom Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- E-commerce Functionality Scripts -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/product-data-init.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/newsletter.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/checkout.js"></script>
+
+    <!-- ============================= -->
+    <!-- Paystack Inline (Added)       -->
+    <!-- Opens Paystack popup on click -->
+    <!-- ============================= -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Paystack checkout wiring (Added - Vanilla JS) -->
+    <script src="assets/js/paystack-checkout.js"></script>
 
 </body>
 

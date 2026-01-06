@@ -347,29 +347,8 @@
     }
   });
 
-  // Newsletter Subscription Form
-    $('.newsletter-form form').on('submit', function(e) {
-      e.preventDefault();
-      var email = $(this).find('input[type="email"]').val().trim();
-      var $form = $(this);
-      var $input = $(this).find('input[type="email"]');
-      
-      if (!email || !isValidEmail(email)) {
-        $input.addClass('is-invalid');
-        return false;
-      }
-      
-      $input.removeClass('is-invalid');
-      var originalText = $form.find('button').html();
-      $form.find('button').prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i>');
-      
-      // Simulate subscription (replace with actual endpoint)
-      setTimeout(function() {
-        alert('Thank you for subscribing to ESTHETICAL COSMETICS newsletter!');
-        $form[0].reset();
-        $form.find('button').prop('disabled', false).html(originalText);
-      }, 1000);
-    });
+  // Newsletter Subscription Form - REMOVED
+  // Newsletter functionality is now handled by newsletter.js
 
   // Cart Functionality
     // Remove item from cart
